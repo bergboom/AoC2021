@@ -72,16 +72,16 @@ topValue = highPosition #math.floor((highPosition-(highPosition-middleValue))/2)
 lowValue = lowPosition #math.floor((middleValue-lowPosition)/2)
 lowestConsumption = 0
 while not(found):
-    print("Values:",topValue,middleValue,lowValue)
+    #print("Values:",topValue,middleValue,lowValue)
     sortMid = isHigherSplit(middleValue)
     sortTop = isHigherSplit(topValue)
     sortLow = isHigherSplit(lowValue)
 
-    print("Results:",sortTop[0], sortMid[0], sortLow[0])
+    #print("Results:",sortTop[0], sortMid[0], sortLow[0])
     lowestConsumption = min(chain(sortMid,sortTop, sortLow))
     if(abs(topValue-middleValue) <= 1 and abs(lowValue-middleValue) <= 1):
-        print("FOUND!: ",sortTop[0], sortMid[0], sortLow[0])
-        print("Found Values:",topValue,middleValue,lowValue)
+        #print("FOUND!: ",sortTop[0], sortMid[0], sortLow[0])
+        #print("Found Values:",topValue,middleValue,lowValue)
         break
 
     if abs(sortMid[0] - sortTop[0]) < abs(sortMid[0] - sortLow[0]):

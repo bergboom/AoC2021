@@ -73,15 +73,10 @@ middleValue = math.floor((highPosition-lowPosition)/2)
 
 
 while not(found):
-    print("middle:",middleValue)
     sort = isHigherSplit(middleValue)
     print(sort)
     if (sort[1] == previousHighWeight and sort[2] == previousLowWeight) or middleValue == previousMiddle or abs(highPosition-lowPosition) <= 2:
-        print("high", highPosition)
-        print("low", lowPosition)
-        print("middle:",middleValue)
         found = True
-        #(isHigh and sort[0] == "low") or (not isHigh and sort[0] == "high") or
     if not found:
         previousHighWeight = sort[1]
         previousLowWeight = sort[2]
